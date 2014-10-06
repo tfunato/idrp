@@ -1,0 +1,153 @@
+Delivered-To: tfunato@gmail.com
+Received: by 10.25.88.3 with SMTP id m3csp135967lfb;
+        Sun, 5 Oct 2014 20:47:25 -0700 (PDT)
+Return-Path: <3zBAyVAkJB1069O5NKDF9BH5DG.7JHOAPI5OJBH5DG.7JH@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com>
+Received-SPF: pass (google.com: domain of 3zBAyVAkJB1069O5NKDF9BH5DG.7JHOAPI5OJBH5DG.7JH@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com designates 10.182.130.168 as permitted sender) client-ip=10.182.130.168
+Authentication-Results: mr.google.com;
+       spf=pass (google.com: domain of 3zBAyVAkJB1069O5NKDF9BH5DG.7JHOAPI5OJBH5DG.7JH@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com designates 10.182.130.168 as permitted sender) smtp.mail=3zBAyVAkJB1069O5NKDF9BH5DG.7JHOAPI5OJBH5DG.7JH@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com;
+       dkim=pass header.i=@google.com
+X-Received: from mr.google.com ([10.182.130.168])
+        by 10.182.130.168 with SMTP id of8mr23125905obb.27.1412567245214 (num_hops = 1);
+        Sun, 05 Oct 2014 20:47:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=mime-version:reply-to:message-id:date:subject:from:to:content-type;
+        bh=8knDxZjOs3xKzjP4+Y2cCAKqwoVsYm13VEKWSvLfQGo=;
+        b=EAPK1WvsZDWlA/GUWTKmQkRFVQ8j2JtD8tUDmAJTyRWg7vOnBdcKhxSxTZ9C3je8os
+         8tXoaV9H39n3kSWu/Ht8EYioe/UxMtczV48dWcM0gvzAkyuqJyPHc/kjRivQtdD35SMn
+         nsvaE7xTKjo4k0HOWCJQCAs0+Oy8wFbqcZpXElUbumCcrdDTgE472U+CwcAiur1Cnqna
+         XqnSJeEKHeEQL3+5xq3c85VNpaCX8CTQPbYBPLeRYoyZM2vpC2IEQLCok0+U5/eiccU9
+         6ne/aix29ykLS8XpKa5lqSkPuKm5KW178rS4ixH0E3T8d8yHgnqhnJe9ntRApdWdr68s
+         +0CA==
+MIME-Version: 1.0
+X-Received: by 10.182.130.168 with SMTP id of8mr16234915obb.27.1412567244395;
+ Sun, 05 Oct 2014 20:47:24 -0700 (PDT)
+Reply-To: Niantic Project Operations <ingress-support@google.com>
+X-Google-Appengine-App-Id: s~betaspike
+X-Google-Appengine-App-Id-Alias: betaspike
+Message-ID: <089e0122f6c8d2d99c0504b8f048@google.com>
+Date: Mon, 06 Oct 2014 03:47:24 +0000
+Subject: Ingress Damage Report: Entities attacked by matahaari
+From: Niantic Project Operations <ingress-support@google.com>
+To: atomosphere <tfunato@gmail.com>
+Content-Type: multipart/alternative; boundary=089e0122f6c8d2d96a0504b8f045
+
+--089e0122f6c8d2d96a0504b8f045
+Content-Type: text/plain; charset=ISO-2022-JP; format=flowed; delsp=yes
+Content-Transfer-Encoding: 7bit
+
+** Ingress - Begin Transmission**
+
+
+
+Agent Name:atomosphere
+Faction:Resistance
+Current Level:L9
+
+
+DAMAGE REPORT
+
+
+
+恵比寿駅前噴水
+
+Komazawa Dori, １丁目 Ebisuminami, Shibuya, Tokyo 150-0013, Japan
+
+
+
+
+Portal - 恵比寿駅前噴水
+
+Map
+
+
+DAMAGE:
+1 Resonator destroyed by matahaari at 03:47 hrs GMT
+No remaining Resonators detected on this Portal.
+
+STATUS:
+Level 1
+Health: 0%
+Owner: [uncaptured]
+
+
+
+
+
+** Ingress - End Transmission **
+
+
+
+--089e0122f6c8d2d96a0504b8f045
+Content-Type: text/html; charset=ISO-2022-JP
+Content-Transfer-Encoding: base64
+
+PGRpdiBzdHlsZT0ibWFyZ2luOiAwOyBwYWRkaW5nOiAwOyBmb250LWZhbWlseTogJ0NvZGEnLCBI
+ZWx2ZXRpY2EsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTNweDsgbGluZS1oZWlnaHQ6IDEuNGVt
+OyBsZXR0ZXItc3BhY2luZzogMC4xZW07Ij48dGFibGUgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFj
+aW5nPSIwIiBib3JkZXI9IjAiIHdpZHRoPSI3NTBweCIgc3R5bGU9ImNvbG9yOiAjNDAzRjQxOyBi
+YWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2OyBtYXJnaW46IDA7IHBhZGRpbmc6IDA7IGJvcmRlci1j
+b2xsYXBzZTogY29sbGFwc2U7Ij48dGJvZHk+PHRyPjx0ZCBoZWlnaHQ9IjE2NXB4IiBzdHlsZT0i
+cGFkZGluZy1sZWZ0OiAyNXB4OyI+PGltZyBzcmM9Imh0dHA6Ly9jb21tb25kYXRhc3RvcmFnZS5n
+b29nbGVhcGlzLmNvbS9pbmdyZXNzZW1haWwvY29tbW9uL3RyYW5zbWlzc2lvbi1iZWdpbi5naWYi
+IGFsdD0iKiogSW5ncmVzcyAtIEJlZ2luIFRyYW5zbWlzc2lvbioqIiB3aWR0aD0iMzA1IiBoZWln
+aHQ9IjE2NSIgc3R5bGU9ImRpc3BsYXk6IGJsb2NrOyBib3JkZXI6IDA7IGhlaWdodDogYXV0bzsg
+bGluZS1oZWlnaHQ6IDEwMCU7IG91dGxpbmU6IG5vbmU7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsi
+PjwvdGQ+PC90cj48dHI+PHRkPjx0YWJsZSBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAi
+IGJvcmRlcj0iMCIgd2lkdGg9IjcwMHB4IiBzdHlsZT0idGFibGUtbGF5b3V0OiBmaXhlZDsgbWFy
+Z2luOiAwIDI1cHg7IHBhZGRpbmc6IDA7IGJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7Ij48dGJv
+ZHk+PHRyPjx0ZCB2YWxpZ249InRvcCIgc3R5bGU9ImZvbnQtc2l6ZTogMTNweDsgcGFkZGluZy1i
+b3R0b206IDEuNWVtOyI+PHNwYW4gc3R5bGU9ImZvbnQtd2VpZ2h0OiBub3JtYWw7IG1hcmdpbi1y
+aWdodDogLjNlbTsgZm9udC1zaXplOiAxMHB4OyB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOyI+
+QWdlbnQgTmFtZTo8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOiAjMzY3OUI5OyI+YXRvbW9zcGhl
+cmU8L3NwYW4+PGJyIC8+PHNwYW4gc3R5bGU9ImZvbnQtd2VpZ2h0OiBub3JtYWw7IG1hcmdpbi1y
+aWdodDogLjNlbTsgZm9udC1zaXplOiAxMHB4OyB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOyI+
+RmFjdGlvbjo8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOiAjMzY3OUI5OyI+UmVzaXN0YW5jZTwv
+c3Bhbj48YnIgLz48c3BhbiBzdHlsZT0iZm9udC13ZWlnaHQ6IG5vcm1hbDsgbWFyZ2luLXJpZ2h0
+OiAuM2VtOyBmb250LXNpemU6IDEwcHg7IHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7Ij5DdXJy
+ZW50IExldmVsOjwvc3Bhbj48c3Bhbj5MOTwvc3Bhbj48L3RkPjwvdHI+PHRyPjx0ZCBzdHlsZT0i
+Zm9udC1zaXplOiAxN3B4OyBwYWRkaW5nLWJvdHRvbTogLjJlbTsgYm9yZGVyLWJvdHRvbTogMnB4
+IHNvbGlkICM0MDNGNDE7Ij48ZGl2PkRBTUFHRSBSRVBPUlQ8L2Rpdj48L3RkPjwvdHI+PHRyPjx0
+ZCBzdHlsZT0icGFkZGluZy10b3A6IDFlbTsgcGFkZGluZy1ib3R0b206IDFlbTsiPjxkaXY+GyRC
+N0NIZjx3MVhBMEouP2UbKEI8L2Rpdj48ZGl2PjxhIHRhcmdldD0iX2JsYW5rIiBocmVmPSJodHRw
+czovL3d3dy5pbmdyZXNzLmNvbS9pbnRlbD9sbD0zNS42NDcxODksMTM5LjcwOTA2OSZwbGw9MzUu
+NjQ3MTg5LDEzOS43MDkwNjkmej0xOSIgc3R5bGU9ImNvbG9yOiAjRDczQjhFOyBib3JkZXI6IG5v
+bmU7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsiPktvbWF6YXdhIERvcmksIBskQiMxQ3pMXBsoQiBF
+YmlzdW1pbmFtaSwgU2hpYnV5YSwgVG9reW8gMTUwLTAwMTMsIEphcGFuPC9hPjwvZGl2PjwvdGQ+
+PC90cj48dHI+PHRkIHN0eWxlPSJvdmVyZmxvdzogaGlkZGVuOyI+PHRhYmxlIGNlbGxwYWRkaW5n
+PSIwIiBjZWxsc3BhY2luZz0iMCIgYm9yZGVyPSIwIj48ZGl2IHN0eWxlPSJ3aWR0aDoxMDAwcHg7
+Ij48ZGl2IHN0eWxlPSJ3aWR0aDogYXV0bzsgaGVpZ2h0OiAxNjBweDsgZmxvYXQ6IGxlZnQ7IGRp
+c3BsYXk6IGlubGluZS1ibG9jazsiPjxpbWcgc3JjPSJodHRwOi8vbGg2LmdncGh0LmNvbS9GVVpr
+VVRrNnJlM2RuOVFLWDNvZG9haTJyYjZIRWJWdDNtVjV1WktPTjhEa1pFQTBMN0J1VlhMcnFEQzdz
+bXY5bWNZN25zcndDbDlCWEQ2MUItayIgYWx0PSJQb3J0YWwgLSAbJEI3Q0hmPHcxWEEwSi4/ZRso
+QiIgaGVpZ2h0PSIxNjAiIHN0eWxlPSJkaXNwbGF5OiBibG9jaztib3JkZXI6IDA7aGVpZ2h0OiBh
+dXRvO2xpbmUtaGVpZ2h0OiAxMDAlO291dGxpbmU6IG5vbmU7dGV4dC1kZWNvcmF0aW9uOiBub25l
+OyI+PC9kaXY+PGRpdiBzdHlsZT0id2lkdGg6IGF1dG87IGhlaWdodDogMTYwcHg7IGZsb2F0OiBs
+ZWZ0OyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IG92ZXJmbG93OmhpZGRlbjsiPjxpbWcgc3JjPSJo
+dHRwOi8vbWFwcy5nb29nbGVhcGlzLmNvbS9tYXBzL2FwaS9zdGF0aWNtYXA/Y2VudGVyPTM1LjY0
+NzE4OSwxMzkuNzA5MTY5Jnpvb209MTkmc2l6ZT03MDB4MTYwJnNlbnNvcj1mYWxzZSZzdHlsZT12
+aXNpYmlsaXR5Om9uJTdDc2F0dXJhdGlvbjotNTAlN0NpbnZlcnRfbGlnaHRuZXNzOnRydWUlN0No
+dWU6MHgxMzFjMWMmc3R5bGU9ZmVhdHVyZTp3YXRlciU3Q3Zpc2liaWxpdHk6b24lN0NodWU6MHgw
+MDVlZmYlN0NpbnZlcnRfbGlnaHRuZXNzOnRydWUmc3R5bGU9ZmVhdHVyZTpwb2klN0N2aXNpYmls
+aXR5Om9mZiZzdHlsZT1mZWF0dXJlOnRyYW5zaXQlN0N2aXNpYmlsaXR5Om9mZiZtYXJrZXJzPWlj
+b246aHR0cDovL2NvbW1vbmRhdGFzdG9yYWdlLmdvb2dsZWFwaXMuY29tL2luZ3Jlc3MuY29tL2lt
+Zy9tYXBfaWNvbnMvbWFya2VyX2ltYWdlcy9uZXV0cmFsX2ljb24ucG5nJTdDc2hhZG93OmZhbHNl
+JTdDMzUuNjQ3MTg5LDEzOS43MDkwNjkiIGFsdD0iTWFwIiB3aWR0aD0iNzAwIiBoZWlnaHQ9IjE2
+MCIgc3R5bGU9ImRpc3BsYXk6IGJsb2NrO2JvcmRlcjogMDtoZWlnaHQ6IGF1dG87bGluZS1oZWln
+aHQ6IDEwMCU7b3V0bGluZTogbm9uZTt0ZXh0LWRlY29yYXRpb246IG5vbmU7Ij48L2Rpdj48ZGl2
+IHN0eWxlPSJjbGVhcjpib3RoOyI+PC9kaXY+PC90YWJsZT48L3RkPjwvdHI+PHRyPjx0ZCBzdHls
+ZT0icGFkZGluZzogMWVtIDA7Ij48dGFibGUgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIw
+IiBib3JkZXI9IjAiIHdpZHRoPSI3MDBweCI+PHRkIHdpZHRoPSI0MDBweCI+PGRpdj5EQU1BR0U6
+PGJyPjEgUmVzb25hdG9yIGRlc3Ryb3llZCBieSA8c3BhbiBzdHlsZT0iY29sb3I6ICM0MjhGNDM7
+Ij5tYXRhaGFhcmk8L3NwYW4+IGF0IDAzOjQ3IGhycyBHTVQ8YnI+Tm8gcmVtYWluaW5nIFJlc29u
+YXRvcnMgZGV0ZWN0ZWQgb24gdGhpcyBQb3J0YWwuPC9kaXY+PC90ZD48dGQ+PGRpdj5TVEFUVVM6
+PGJyPkxldmVsIDE8YnI+SGVhbHRoOiAwJTxicj5Pd25lcjogW3VuY2FwdHVyZWRdPC9kaXY+PC90
+ZD48L3RhYmxlPjwvdGQ+PC90cj48L3Rib2R5PjwvdGFibGU+PC90ZD48L3RyPjx0cj48dGQgaGVp
+Z2h0PSIzNHB4IiBzdHlsZT0icGFkZGluZy10b3A6IDFlbTsgcGFkZGluZy1sZWZ0OiAyNXB4OyI+
+PGltZyBzcmM9Imh0dHA6Ly9jb21tb25kYXRhc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9pbmdyZXNz
+ZW1haWwvY29tbW9uL3RyYW5zbWlzc2lvbi1lbmQuZ2lmIiBhbHQ9IioqIEluZ3Jlc3MgLSBFbmQg
+VHJhbnNtaXNzaW9uICoqIiB3aWR0aD0iMjkzIiBoZWlnaHQ9IjM0IiBzdHlsZT0iZGlzcGxheTog
+YmxvY2s7IGJvcmRlcjogMDsgaGVpZ2h0OiBhdXRvOyBsaW5lLWhlaWdodDogMTAwJTsgb3V0bGlu
+ZTogbm9uZTsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyI+PC90ZD48L3RyPjwvdGJvZHk+PC90YWJs
+ZT48L2Rpdj4=
+--089e0122f6c8d2d96a0504b8f045--
