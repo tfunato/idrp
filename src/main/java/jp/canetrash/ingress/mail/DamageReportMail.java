@@ -1,5 +1,7 @@
 package jp.canetrash.ingress.mail;
 
+import java.util.Date;
+
 /**
  * Ingress damage report mail
  * 
@@ -37,6 +39,16 @@ public class DamageReportMail {
 	private String currentPortalHealth;
 
 	private String currentPortalOwner;
+
+	private Date alertDate;
+
+	/** 経度 */
+	private String portalLongitude;
+
+	/** 緯度 */
+	private String portalLatitude;
+
+	private String damageReport;
 
 	public String getFrom() {
 		return from;
@@ -158,4 +170,35 @@ public class DamageReportMail {
 		this.currentPortalOwner = currentPortalOwner;
 	}
 
+	public Date getAlertDate() {
+		return alertDate;
+	}
+
+	public void setAlertDate(Date alertDate) {
+		this.alertDate = alertDate;
+	}
+
+	public String getPortalLongitude() {
+		return portalLongitude;
+	}
+
+	public void setPortalLongitude(String portalLongitude) {
+		this.portalLongitude = portalLongitude;
+	}
+
+	public String getPortalLatitude() {
+		return portalLatitude;
+	}
+
+	public void setPortalLatitude(String portalLatitude) {
+		this.portalLatitude = portalLatitude;
+	}
+
+	public String getDamageReport() {
+		return damageReport;
+	}
+
+	public void setDamageReport(String damageReport) {
+		this.damageReport = damageReport;
+	}
 }

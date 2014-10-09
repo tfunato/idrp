@@ -1,0 +1,104 @@
+Delivered-To: tfunato@gmail.com
+Received: by 10.25.41.144 with SMTP id p138csp19026lfp;
+        Mon, 6 Oct 2014 06:00:59 -0700 (PDT)
+Return-Path: <3ipIyVAkJByE8BQ7PMFHBDJ7FI.9LJQCRK7QLDJ7FI.9LJ@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com>
+Received-SPF: pass (google.com: domain of 3ipIyVAkJByE8BQ7PMFHBDJ7FI.9LJQCRK7QLDJ7FI.9LJ@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com designates 10.182.130.168 as permitted sender) client-ip=10.182.130.168
+Authentication-Results: mr.google.com;
+       spf=pass (google.com: domain of 3ipIyVAkJByE8BQ7PMFHBDJ7FI.9LJQCRK7QLDJ7FI.9LJ@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com designates 10.182.130.168 as permitted sender) smtp.mail=3ipIyVAkJByE8BQ7PMFHBDJ7FI.9LJQCRK7QLDJ7FI.9LJ@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com;
+       dkim=pass header.i=@google.com
+X-Received: from mr.google.com ([10.182.130.168])
+        by 10.182.130.168 with SMTP id of8mr25211751obb.27.1412600459469 (num_hops = 1);
+        Mon, 06 Oct 2014 06:00:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=mime-version:reply-to:message-id:date:subject:from:to:content-type;
+        bh=eqf8gfjCObcE62u2/pFLUQbXX/2hvgjJC8CjQdZ+5j0=;
+        b=aDaAjIDEouas0jUGIMWsEfzgM+1fKIX0fFCrMXHgzE2mZlKky34BTuKhIPp3afeTVy
+         bpHFzkxPAl5oP9ARSyScrH/MvG4iA2KxIXyiNntBcvDvfFFPsWsIFpm9vNRvUQLteZ9k
+         BU4JmRganRQNbX7npqteAuSQ3AcX4SvTDd9RjzGQn52dkyj8qqvUbfuSJrnNyUu41zEL
+         ANOHr9G1xU9wKSOqBpqr7nMuZwtgrgQBttg1Z1RZsnvX+D0xv5W4+JZ50ZKgUYPD9UkI
+         jaKV+ZzbkAnFKJZjbbeZOFlHp/ow9om2b+gFH+fO93qllasr+NqPm8VmgqbrRBkJZ4ef
+         2rnQ==
+MIME-Version: 1.0
+X-Received: by 10.182.130.168 with SMTP id of8mr17545734obb.27.1412600458593;
+ Mon, 06 Oct 2014 06:00:58 -0700 (PDT)
+Reply-To: Niantic Project Operations <ingress-support@google.com>
+X-Google-Appengine-App-Id: s~betaspike
+X-Google-Appengine-App-Id-Alias: betaspike
+Message-ID: <089e0122f6c88b48ea0504c0ac65@google.com>
+Date: Mon, 06 Oct 2014 13:00:58 +0000
+Subject: Ingress Damage Report: Entities attacked by mune1979
+From: Niantic Project Operations <ingress-support@google.com>
+To: atomosphere <tfunato@gmail.com>
+Content-Type: multipart/alternative; boundary=089e0122f6c88b48c30504c0ac62
+
+--089e0122f6c88b48c30504c0ac62
+Content-Type: text/plain; charset=Big5; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+KiogSW5ncmVzcyAtIEJlZ2luIFRyYW5zbWlzc2lvbioqDQoNCg0KDQpBZ2VudCBOYW1lOmF0b21v
+c3BoZXJlDQpGYWN0aW9uOlJlc2lzdGFuY2UNCkN1cnJlbnQgTGV2ZWw6TDkNCg0KDQpEQU1BR0Ug
+UkVQT1JUDQoNCg0KDQql2w0KDQpKYXBhbiwgVG9reW8sIE1lZ3VybywgSml5dWdhb2thLCCisKRC
+pdiity2iuA0KDQoNCg0KDQpQb3J0YWwgLSCl2w0KDQpNYXANCg0KDQpEQU1BR0U6DQoxIFJlc29u
+YXRvciBkZXN0cm95ZWQgYnkgbXVuZTE5NzkgYXQgMTM6MDAgaHJzIEdNVA0KTm8gcmVtYWluaW5n
+IFJlc29uYXRvcnMgZGV0ZWN0ZWQgb24gdGhpcyBQb3J0YWwuDQoNClNUQVRVUzoNCkxldmVsIDEN
+CkhlYWx0aDogMCUNCk93bmVyOiBbdW5jYXB0dXJlZF0NCg0KDQoNCg0KDQoqKiBJbmdyZXNzIC0g
+RW5kIFRyYW5zbWlzc2lvbiAqKg0KDQoNCg==
+--089e0122f6c88b48c30504c0ac62
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div style=3D"margin: 0; padding: 0; font-family: 'Coda', Helvetica, sans-s=
+erif; font-size: 13px; line-height: 1.4em; letter-spacing: 0.1em;"><table c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"750px" style=3D"co=
+lor: #403F41; background-color: #f6f6f6; margin: 0; padding: 0; border-coll=
+apse: collapse;"><tbody><tr><td height=3D"165px" style=3D"padding-left: 25p=
+x;"><img src=3D"http://commondatastorage.googleapis.com/ingressemail/common=
+/transmission-begin.gif" alt=3D"** Ingress - Begin Transmission**" width=3D=
+"305" height=3D"165" style=3D"display: block; border: 0; height: auto; line=
+-height: 100%; outline: none; text-decoration: none;"></td></tr><tr><td><ta=
+ble cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"700px" style=
+=3D"table-layout: fixed; margin: 0 25px; padding: 0; border-collapse: colla=
+pse;"><tbody><tr><td valign=3D"top" style=3D"font-size: 13px; padding-botto=
+m: 1.5em;"><span style=3D"font-weight: normal; margin-right: .3em; font-siz=
+e: 10px; text-transform: uppercase;">Agent Name:</span><span style=3D"color=
+: #3679B9;">atomosphere</span><br /><span style=3D"font-weight: normal; mar=
+gin-right: .3em; font-size: 10px; text-transform: uppercase;">Faction:</spa=
+n><span style=3D"color: #3679B9;">Resistance</span><br /><span style=3D"fon=
+t-weight: normal; margin-right: .3em; font-size: 10px; text-transform: uppe=
+rcase;">Current Level:</span><span>L9</span></td></tr><tr><td style=3D"font=
+-size: 17px; padding-bottom: .2em; border-bottom: 2px solid #403F41;"><div>=
+DAMAGE REPORT</div></td></tr><tr><td style=3D"padding-top: 1em; padding-bot=
+tom: 1em;"><div>=E7=9F=B3</div><div><a target=3D"_blank" href=3D"https://ww=
+w.ingress.com/intel?ll=3D35.606682,139.668971&pll=3D35.606682,139.668971&z=
+=3D19" style=3D"color: #D73B8E; border: none; text-decoration: none;">Japan=
+, Tokyo, Meguro, Jiyugaoka, =EF=BC=91=E4=B8=81=E7=9B=AE=EF=BC=98=E2=88=92=
+=EF=BC=99</a></div></td></tr><tr><td style=3D"overflow: hidden;"><table cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0"><div style=3D"width:1000px;">=
+<div style=3D"width: auto; height: 160px; float: left; display: inline-bloc=
+k;"><img src=3D"http://lh3.ggpht.com/EJuhT5QxrCJIwXlKBCwarTw6Q_4eIdKgQABaDr=
+4L29DW6oDi1J0DBmIHE5jU4EpPByrWjGEyVZzxYvKnew" alt=3D"Portal - =E7=9F=B3" he=
+ight=3D"160" style=3D"display: block;border: 0;height: auto;line-height: 10=
+0%;outline: none;text-decoration: none;"></div><div style=3D"width: auto; h=
+eight: 160px; float: left; display: inline-block; overflow:hidden;"><img sr=
+c=3D"http://maps.googleapis.com/maps/api/staticmap?center=3D35.606682,139.6=
+69071&zoom=3D19&size=3D700x160&sensor=3Dfalse&style=3Dvisibility:on%7Csatur=
+ation:-50%7Cinvert_lightness:true%7Chue:0x131c1c&style=3Dfeature:water%7Cvi=
+sibility:on%7Chue:0x005eff%7Cinvert_lightness:true&style=3Dfeature:poi%7Cvi=
+sibility:off&style=3Dfeature:transit%7Cvisibility:off&markers=3Dicon:http:/=
+/commondatastorage.googleapis.com/ingress.com/img/map_icons/marker_images/n=
+eutral_icon.png%7Cshadow:false%7C35.606682,139.668971" alt=3D"Map" width=3D=
+"700" height=3D"160" style=3D"display: block;border: 0;height: auto;line-he=
+ight: 100%;outline: none;text-decoration: none;"></div><div style=3D"clear:=
+both;"></div></table></td></tr><tr><td style=3D"padding: 1em 0;"><table cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"700px"><td width=3D"=
+400px"><div>DAMAGE:<br>1 Resonator destroyed by <span style=3D"color: #428F=
+43;">mune1979</span> at 13:00 hrs GMT<br>No remaining Resonators detected o=
+n this Portal.</div></td><td><div>STATUS:<br>Level 1<br>Health: 0%<br>Owner=
+: [uncaptured]</div></td></table></td></tr></tbody></table></td></tr><tr><t=
+d height=3D"34px" style=3D"padding-top: 1em; padding-left: 25px;"><img src=
+=3D"http://commondatastorage.googleapis.com/ingressemail/common/transmissio=
+n-end.gif" alt=3D"** Ingress - End Transmission **" width=3D"293" height=3D=
+"34" style=3D"display: block; border: 0; height: auto; line-height: 100%; o=
+utline: none; text-decoration: none;"></td></tr></tbody></table></div>
+--089e0122f6c88b48c30504c0ac62--

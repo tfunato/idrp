@@ -10,5 +10,5 @@ import javax.mail.Message;
  * 
  */
 public interface Parser {
-	DamageReportMail parse(Message msg) throws Exception;
+	DamageReportMail parse(Message msg);
 }
