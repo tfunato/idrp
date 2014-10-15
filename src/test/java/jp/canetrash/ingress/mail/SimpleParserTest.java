@@ -4,8 +4,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.io.FileInputStream;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Calendar;
 
 import javax.mail.internet.MimeMessage;
 
@@ -47,16 +46,24 @@ public class SimpleParserTest {
 		assertThat(actual.getCurrentPortalOwner(), is("[uncaptured]"));
 		assertThat(actual.getPortalLatitude(), is("35.647189"));
 		assertThat(actual.getPortalLongitude(), is("139.709069"));
-		System.out.println(actual.getDamageReport());
-		String s = actual.getDamageReport();
-		Pattern p = Pattern.compile("(\\d\\d:\\d\\d)");
-		Matcher matcher = p.matcher(s);
-		if (matcher.find()) {
-			System.out.println(matcher.group());
-		} else {
-			System.out.println("mitura");
-		}
-		//System.out.println(s.substring(s.lastIndexOf("at ") + 3, s.indexOf(" hrs")));
+		Calendar actualSendCal = Calendar.getInstance();
+		actualSendCal.clear();
+		actualSendCal.setTimeInMillis(actual.getSentDate().getTime());
+		assertThat(actualSendCal.get(Calendar.MONTH), is(Calendar.OCTOBER));
+		assertThat(actualSendCal.get(Calendar.DAY_OF_MONTH), is(6));
+		assertThat(actualSendCal.get(Calendar.HOUR_OF_DAY), is(12));
+		assertThat(actualSendCal.get(Calendar.MINUTE), is(47));
+		assertThat(actualSendCal.get(Calendar.SECOND), is(24));
+
+		Calendar actualAlertCal = Calendar.getInstance();
+		actualAlertCal.clear();
+		actualAlertCal.setTimeInMillis(actual.getAlertDate().getTime());
+		assertThat(actualAlertCal.get(Calendar.MONTH), is(Calendar.OCTOBER));
+		assertThat(actualAlertCal.get(Calendar.DAY_OF_MONTH), is(6));
+		assertThat(actualAlertCal.get(Calendar.HOUR_OF_DAY), is(12));
+		assertThat(actualAlertCal.get(Calendar.MINUTE), is(47));
+		assertThat(actualAlertCal.get(Calendar.SECOND), is(0));
+
 	}
 
 	@Test
@@ -68,10 +75,17 @@ public class SimpleParserTest {
 		assertThat(actual.getAgentLevel(), is("L9"));
 		assertThat(actual.getFaction(), is("Resistance"));
 		assertThat(actual.getPortalName(), is("石"));
-		assertThat(actual.getPortalAddress(), is("Japan, Tokyo, Meguro, Jiyugaoka, １丁目８−９"));
-		assertThat(actual.getPortalIntelUrl(), is("https://www.ingress.com/intel?ll=35.606682,139.668971&pll=35.606682,139.668971&z=19"));
-		assertThat(actual.getPortalImageUrl(), is("http://lh3.ggpht.com/EJuhT5QxrCJIwXlKBCwarTw6Q_4eIdKgQABaDr4L29DW6oDi1J0DBmIHE5jU4EpPByrWjGEyVZzxYvKnew"));
-		assertThat(actual.getPortalStatusImageUrl(), is("http://maps.googleapis.com/maps/api/staticmap?center=35.606682,139.669071&zoom=19&size=700x160&sensor=false&style=visibility:on%7Csaturation:-50%7Cinvert_lightness:true%7Chue:0x131c1c&style=feature:water%7Cvisibility:on%7Chue:0x005eff%7Cinvert_lightness:true&style=feature:poi%7Cvisibility:off&style=feature:transit%7Cvisibility:off&markers=icon:http://commondatastorage.googleapis.com/ingress.com/img/map_icons/marker_images/neutral_icon.png%7Cshadow:false%7C35.606682,139.668971"));
+		assertThat(actual.getPortalAddress(),
+				is("Japan, Tokyo, Meguro, Jiyugaoka, １丁目８−９"));
+		assertThat(
+				actual.getPortalIntelUrl(),
+				is("https://www.ingress.com/intel?ll=35.606682,139.668971&pll=35.606682,139.668971&z=19"));
+		assertThat(
+				actual.getPortalImageUrl(),
+				is("http://lh3.ggpht.com/EJuhT5QxrCJIwXlKBCwarTw6Q_4eIdKgQABaDr4L29DW6oDi1J0DBmIHE5jU4EpPByrWjGEyVZzxYvKnew"));
+		assertThat(
+				actual.getPortalStatusImageUrl(),
+				is("http://maps.googleapis.com/maps/api/staticmap?center=35.606682,139.669071&zoom=19&size=700x160&sensor=false&style=visibility:on%7Csaturation:-50%7Cinvert_lightness:true%7Chue:0x131c1c&style=feature:water%7Cvisibility:on%7Chue:0x005eff%7Cinvert_lightness:true&style=feature:poi%7Cvisibility:off&style=feature:transit%7Cvisibility:off&markers=icon:http://commondatastorage.googleapis.com/ingress.com/img/map_icons/marker_images/neutral_icon.png%7Cshadow:false%7C35.606682,139.668971"));
 		assertThat(actual.getEnemyAgentName(), is("mune1979"));
 		assertThat(actual.getCurrentPortalLevel(), is("1"));
 		assertThat(actual.getCurrentPortalHealth(), is("0%"));

@@ -16,6 +16,8 @@ public class DamageReportMail {
 
 	private String subject;
 
+	private Date sentDate;
+
 	private String agentName;
 
 	private String faction;
@@ -72,6 +74,14 @@ public class DamageReportMail {
 
 	public void setSubject(String subject) {
 		this.subject = subject;
+	}
+
+	public Date getSentDate() {
+		return sentDate;
+	}
+
+	public void setSentDate(Date sentDate) {
+		this.sentDate = sentDate;
 	}
 
 	public String getAgentName() {

@@ -27,6 +27,7 @@ public class SimpleParser extends AbstractParser {
 		mail.setSubject(getSubject(msg));
 
 		try {
+			mail.setSentDate(msg.getSentDate());
 			Object content = msg.getContent();
 			if (content instanceof Multipart) {
 				final Multipart multiPart = (Multipart) content;
@@ -95,8 +96,8 @@ public class SimpleParser extends AbstractParser {
 						element = doc.select(DAMAGE_REPORT_CSSSELECTOR);
 						mail.setDamageReport(element.text());
 						// alert date
-						mail.setAlertDate(getAlertDateFromDamageReport(mail
-								.getDamageReport()));
+						mail.setAlertDate(getAlertDateFromDamageReport(
+								mail.getSentDate(), mail.getDamageReport()));
 
 						// html parse end
 						break;

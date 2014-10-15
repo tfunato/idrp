@@ -1,6 +1,8 @@
 package jp.canetrash.ingress.mail;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,17 +50,41 @@ public abstract class AbstractParser implements Parser {
 		}
 	}
 
-	protected Date getAlertDateFromDamageReport(String damageReport) {
+	protected Date getAlertDateFromDamageReport(Date targetDate,
+			String damageReport) {
 		Matcher matcher = TIME_PATTERN.matcher(damageReport);
 		if (matcher.find()) {
 			// LocalはGMT
 			String time = matcher.group();
+			String[] timeSprint = time.split(":");
+			String hour = timeSprint[0];
+			String minute = timeSprint[1];
+
 			// XXX 時間しか無いので単純にCalendarにセットするだけでは、日付またぎに対応できないため工夫が必要
+			// メールの送信日時を利用
+			Calendar cal = Calendar.getInstance();
+			cal.setTimeInMillis(targetDate.getTime());
+			cal.setTimeZone(TimeZone.getTimeZone("GMT"));
+			cal.set(Calendar.SECOND, 0);
+
+			Calendar targetCal = Calendar.getInstance();
+			targetCal.setTimeZone(TimeZone.getTimeZone("GMT"));
+			targetCal.setTimeInMillis(targetDate.getTime());
+			targetCal.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour));
+			targetCal.set(Calendar.MINUTE, Integer.parseInt(minute));
+			targetCal.set(Calendar.SECOND, 0);
+			long calLong = cal.getTimeInMillis();
+			long targetCalLogn = targetCal.getTimeInMillis();
+			if ((calLong - targetCalLogn) >= 43200000L) {
+				// 日付またぎで12時間以上差がある場合、-1日する
+				targetCal.add(Calendar.DATE, -1);
+			}
+			targetCal.setTimeZone(TimeZone.getTimeZone("JST"));
+			return targetCal.getTime();
+
 		} else {
 			throw new IngressMailParseException("cant get alert date.["
 					+ damageReport + "]");
 		}
-		return null;
 	}
-
 }
