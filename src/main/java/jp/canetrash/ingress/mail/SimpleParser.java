@@ -96,8 +96,7 @@ public class SimpleParser extends AbstractParser {
 						element = doc.select(DAMAGE_REPORT_CSSSELECTOR);
 						mail.setDamageReport(element.text());
 						// alert date
-						mail.setAlertDate(getAlertDateFromDamageReport(
-								mail.getSentDate(), mail.getDamageReport()));
+						mail.setAlertDate(mail.getSentDate());
 
 						// html parse end
 						break;
