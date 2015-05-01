@@ -1,6 +1,7 @@
 package jp.canetrash.ingress.mail;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.io.FileInputStream;
@@ -54,5 +55,14 @@ public class SimpleParserTest {
 		assertThat(actual.getPortals().get(1).getLongitude(), is("139.790373"));
 		assertThat(actual.getPortals().get(1).getLatitude(), is("35.710209"));
 		assertThat(actual.getPortals().get(1).getPortalIntelUrl(), is("https://www.ingress.com/intel?ll=35.710209,139.790373&pll=35.710209,139.790373&z=19"));
+	}
+	
+	@Test
+	public void nonDamageMailTest() throws Exception {
+		MimeMessage msg = new MimeMessage(null, new FileInputStream(
+				"src/test/resources/non-damege-mail.eml"));
+		DamageReportMail actual = target.parse(msg);
+		assertThat(actual, nullValue());
+		
 	}
 }

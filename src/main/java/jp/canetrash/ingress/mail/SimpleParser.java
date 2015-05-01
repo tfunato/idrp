@@ -20,7 +20,14 @@ public class SimpleParser extends AbstractParser {
 
 	@Override
 	public DamageReportMail parse(Message msg) {
+
+		String subject = getSubject(msg);
+		if (subject == null || !subject.startsWith("Ingress Damage Report")) {
+			return null;
+		}
+
 		DamageReportMail mail = new DamageReportMail();
+		mail.setSubject(subject);
 		InternetAddress from = getFrom(msg);
 		if (from != null) {
 			mail.setFrom(from.getPersonal());
@@ -29,7 +36,6 @@ public class SimpleParser extends AbstractParser {
 		if (to != null) {
 			mail.setTo(to.getPersonal());
 		}
-		mail.setSubject(getSubject(msg));
 
 		try {
 			mail.setDate(msg.getSentDate());
