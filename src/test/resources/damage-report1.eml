@@ -1,38 +1,46 @@
 Delivered-To: tfunato@gmail.com
-Received: by 10.25.88.3 with SMTP id m3csp135967lfb;
-        Sun, 5 Oct 2014 20:47:25 -0700 (PDT)
-Return-Path: <3zBAyVAkJB1069O5NKDF9BH5DG.7JHOAPI5OJBH5DG.7JH@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com>
-Received-SPF: pass (google.com: domain of 3zBAyVAkJB1069O5NKDF9BH5DG.7JHOAPI5OJBH5DG.7JH@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com designates 10.182.130.168 as permitted sender) client-ip=10.182.130.168
+Received: by 10.140.91.136 with SMTP id z8csp366377qgd;
+        Tue, 14 Oct 2014 04:07:45 -0700 (PDT)
+X-Received: from mr.google.com ([10.152.45.105])
+        by 10.152.45.105 with SMTP id l9mr2631404lam.69.1413284865771 (num_hops = 1);
+        Tue, 14 Oct 2014 04:07:45 -0700 (PDT)
+X-Received: by 10.152.45.105 with SMTP id l9mr4535504lam.69.1413284865385;
+        Tue, 14 Oct 2014 04:07:45 -0700 (PDT)
+Delivered-To: tfunato@gmail.com
+Received: by 10.25.41.144 with SMTP id p138csp375179lfp;
+        Tue, 14 Oct 2014 04:07:44 -0700 (PDT)
+Return-Path: <3_wM9VAkJB6IDGVCURKMGIOCKN.EQOVHWPCVQIOCKN.EQO@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com>
+Received-SPF: pass (google.com: domain of 3_wM9VAkJB6IDGVCURKMGIOCKN.EQOVHWPCVQIOCKN.EQO@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com designates 10.236.63.41 as permitted sender) client-ip=10.236.63.41
 Authentication-Results: mr.google.com;
-       spf=pass (google.com: domain of 3zBAyVAkJB1069O5NKDF9BH5DG.7JHOAPI5OJBH5DG.7JH@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com designates 10.182.130.168 as permitted sender) smtp.mail=3zBAyVAkJB1069O5NKDF9BH5DG.7JHOAPI5OJBH5DG.7JH@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com;
+       spf=pass (google.com: domain of 3_wM9VAkJB6IDGVCURKMGIOCKN.EQOVHWPCVQIOCKN.EQO@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com designates 10.236.63.41 as permitted sender) smtp.mail=3_wM9VAkJB6IDGVCURKMGIOCKN.EQOVHWPCVQIOCKN.EQO@M3KW2WVRGUFZ5GODRSRYTGD7.apphosting.bounces.google.com;
        dkim=pass header.i=@google.com
-X-Received: from mr.google.com ([10.182.130.168])
-        by 10.182.130.168 with SMTP id of8mr23125905obb.27.1412567245214 (num_hops = 1);
-        Sun, 05 Oct 2014 20:47:25 -0700 (PDT)
+X-Received: from mr.google.com ([10.236.63.41])
+        by 10.236.63.41 with SMTP id z29mr4126878yhc.15.1413284864446 (num_hops = 1);
+        Tue, 14 Oct 2014 04:07:44 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
         d=google.com; s=20120113;
         h=mime-version:reply-to:message-id:date:subject:from:to:content-type;
-        bh=8knDxZjOs3xKzjP4+Y2cCAKqwoVsYm13VEKWSvLfQGo=;
-        b=EAPK1WvsZDWlA/GUWTKmQkRFVQ8j2JtD8tUDmAJTyRWg7vOnBdcKhxSxTZ9C3je8os
-         8tXoaV9H39n3kSWu/Ht8EYioe/UxMtczV48dWcM0gvzAkyuqJyPHc/kjRivQtdD35SMn
-         nsvaE7xTKjo4k0HOWCJQCAs0+Oy8wFbqcZpXElUbumCcrdDTgE472U+CwcAiur1Cnqna
-         XqnSJeEKHeEQL3+5xq3c85VNpaCX8CTQPbYBPLeRYoyZM2vpC2IEQLCok0+U5/eiccU9
-         6ne/aix29ykLS8XpKa5lqSkPuKm5KW178rS4ixH0E3T8d8yHgnqhnJe9ntRApdWdr68s
-         +0CA==
+        bh=g5zSJF4/3BhAJHhnwy8IRkUHxAd7me3uoX51sO0MpZ0=;
+        b=KTjBasFSLE07G2tfYyZw3kBh0wm9KBXtTWU+39Y+sYrXvQqy4/bxa6k1pkel3J1xJN
+         cekwWwIAQ7cxNNY2mjetpJXtq945l+4XndmJeOWPM0H8FE7LG1AcNmNHreoCzrVCwKnB
+         CZfXWb4zcnbWCuVboywwWseRdIfQKXfe+JLe8WjQy17cqzajbIS0JMqIx19Y7NLX6zwe
+         h+LD3jl5SHx/HIMwCCp1DYR6obE48Uqb2ULF5HDd3WunxVKF23DpIHEpoEHXZwMm3Opi
+         X/QNElQFo77N9w/2OTVQigzCu7XSXWMDfEZu9vm7WVU5n0gQmhe8rAwuy4oP7aY+SYZR
+         y70g==
 MIME-Version: 1.0
-X-Received: by 10.182.130.168 with SMTP id of8mr16234915obb.27.1412567244395;
- Sun, 05 Oct 2014 20:47:24 -0700 (PDT)
+X-Received: by 10.236.63.41 with SMTP id z29mr2712148yhc.15.1413284863982;
+ Tue, 14 Oct 2014 04:07:43 -0700 (PDT)
 Reply-To: Niantic Project Operations <ingress-support@google.com>
 X-Google-Appengine-App-Id: s~betaspike
 X-Google-Appengine-App-Id-Alias: betaspike
-Message-ID: <089e0122f6c8d2d99c0504b8f048@google.com>
-Date: Mon, 06 Oct 2014 03:47:24 +0000
-Subject: Ingress Damage Report: Entities attacked by matahaari
+Message-ID: <089e013a038648bdf9050560060c@google.com>
+Date: Tue, 14 Oct 2014 11:07:43 +0000
+Subject: Ingress Damage Report: Entities attacked by johnfkenjiro
 From: Niantic Project Operations <ingress-support@google.com>
 To: atomosphere <tfunato@gmail.com>
-Content-Type: multipart/alternative; boundary=089e0122f6c8d2d96a0504b8f045
+Content-Type: multipart/alternative; boundary=089e013a038648bdd70505600609
 
---089e0122f6c8d2d96a0504b8f045
+--089e013a038648bdd70505600609
 Content-Type: text/plain; charset=ISO-2022-JP; format=flowed; delsp=yes
 Content-Transfer-Encoding: 7bit
 
@@ -49,26 +57,26 @@ DAMAGE REPORT
 
 
 
-恵比寿駅前噴水
+$BL+664Q8w0FFbHD(B
 
-Komazawa Dori, １丁目 Ebisuminami, Shibuya, Tokyo 150-0013, Japan
-
-
+1 Chome-18-11 Shinkawa, Chuo, Tokyo, Japan
 
 
-Portal - 恵比寿駅前噴水
+
+
+Portal - $BL+664Q8w0FFbHD(B
 
 Map
 
 
 DAMAGE:
-1 Resonator destroyed by matahaari at 03:47 hrs GMT
-No remaining Resonators detected on this Portal.
+1 Mod destroyed by johnfkenjiro at 11:07 hrs GMT
+8 Resonators remaining on this Portal.
 
 STATUS:
-Level 1
-Health: 0%
-Owner: [uncaptured]
+Level 7
+Health: 95%
+Owner: GapPacker
 
 
 
@@ -78,7 +86,7 @@ Owner: [uncaptured]
 
 
 
---089e0122f6c8d2d96a0504b8f045
+--089e013a038648bdd70505600609
 Content-Type: text/html; charset=ISO-2022-JP
 Content-Transfer-Encoding: base64
 
@@ -109,45 +117,44 @@ ZW50IExldmVsOjwvc3Bhbj48c3Bhbj5MOTwvc3Bhbj48L3RkPjwvdHI+PHRyPjx0ZCBzdHlsZT0i
 Zm9udC1zaXplOiAxN3B4OyBwYWRkaW5nLWJvdHRvbTogLjJlbTsgYm9yZGVyLWJvdHRvbTogMnB4
 IHNvbGlkICM0MDNGNDE7Ij48ZGl2PkRBTUFHRSBSRVBPUlQ8L2Rpdj48L3RkPjwvdHI+PHRyPjx0
 ZCBzdHlsZT0icGFkZGluZy10b3A6IDFlbTsgcGFkZGluZy1ib3R0b206IDFlbTsiPjxkaXY+GyRC
-N0NIZjx3MVhBMEouP2UbKEI8L2Rpdj48ZGl2PjxhIHRhcmdldD0iX2JsYW5rIiBocmVmPSJodHRw
-czovL3d3dy5pbmdyZXNzLmNvbS9pbnRlbD9sbD0zNS42NDcxODksMTM5LjcwOTA2OSZwbGw9MzUu
-NjQ3MTg5LDEzOS43MDkwNjkmej0xOSIgc3R5bGU9ImNvbG9yOiAjRDczQjhFOyBib3JkZXI6IG5v
-bmU7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsiPktvbWF6YXdhIERvcmksIBskQiMxQ3pMXBsoQiBF
-YmlzdW1pbmFtaSwgU2hpYnV5YSwgVG9reW8gMTUwLTAwMTMsIEphcGFuPC9hPjwvZGl2PjwvdGQ+
-PC90cj48dHI+PHRkIHN0eWxlPSJvdmVyZmxvdzogaGlkZGVuOyI+PHRhYmxlIGNlbGxwYWRkaW5n
-PSIwIiBjZWxsc3BhY2luZz0iMCIgYm9yZGVyPSIwIj48ZGl2IHN0eWxlPSJ3aWR0aDoxMDAwcHg7
-Ij48ZGl2IHN0eWxlPSJ3aWR0aDogYXV0bzsgaGVpZ2h0OiAxNjBweDsgZmxvYXQ6IGxlZnQ7IGRp
-c3BsYXk6IGlubGluZS1ibG9jazsiPjxpbWcgc3JjPSJodHRwOi8vbGg2LmdncGh0LmNvbS9GVVpr
-VVRrNnJlM2RuOVFLWDNvZG9haTJyYjZIRWJWdDNtVjV1WktPTjhEa1pFQTBMN0J1VlhMcnFEQzdz
-bXY5bWNZN25zcndDbDlCWEQ2MUItayIgYWx0PSJQb3J0YWwgLSAbJEI3Q0hmPHcxWEEwSi4/ZRso
-QiIgaGVpZ2h0PSIxNjAiIHN0eWxlPSJkaXNwbGF5OiBibG9jaztib3JkZXI6IDA7aGVpZ2h0OiBh
-dXRvO2xpbmUtaGVpZ2h0OiAxMDAlO291dGxpbmU6IG5vbmU7dGV4dC1kZWNvcmF0aW9uOiBub25l
-OyI+PC9kaXY+PGRpdiBzdHlsZT0id2lkdGg6IGF1dG87IGhlaWdodDogMTYwcHg7IGZsb2F0OiBs
-ZWZ0OyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IG92ZXJmbG93OmhpZGRlbjsiPjxpbWcgc3JjPSJo
-dHRwOi8vbWFwcy5nb29nbGVhcGlzLmNvbS9tYXBzL2FwaS9zdGF0aWNtYXA/Y2VudGVyPTM1LjY0
-NzE4OSwxMzkuNzA5MTY5Jnpvb209MTkmc2l6ZT03MDB4MTYwJnNlbnNvcj1mYWxzZSZzdHlsZT12
-aXNpYmlsaXR5Om9uJTdDc2F0dXJhdGlvbjotNTAlN0NpbnZlcnRfbGlnaHRuZXNzOnRydWUlN0No
-dWU6MHgxMzFjMWMmc3R5bGU9ZmVhdHVyZTp3YXRlciU3Q3Zpc2liaWxpdHk6b24lN0NodWU6MHgw
-MDVlZmYlN0NpbnZlcnRfbGlnaHRuZXNzOnRydWUmc3R5bGU9ZmVhdHVyZTpwb2klN0N2aXNpYmls
-aXR5Om9mZiZzdHlsZT1mZWF0dXJlOnRyYW5zaXQlN0N2aXNpYmlsaXR5Om9mZiZtYXJrZXJzPWlj
-b246aHR0cDovL2NvbW1vbmRhdGFzdG9yYWdlLmdvb2dsZWFwaXMuY29tL2luZ3Jlc3MuY29tL2lt
-Zy9tYXBfaWNvbnMvbWFya2VyX2ltYWdlcy9uZXV0cmFsX2ljb24ucG5nJTdDc2hhZG93OmZhbHNl
-JTdDMzUuNjQ3MTg5LDEzOS43MDkwNjkiIGFsdD0iTWFwIiB3aWR0aD0iNzAwIiBoZWlnaHQ9IjE2
-MCIgc3R5bGU9ImRpc3BsYXk6IGJsb2NrO2JvcmRlcjogMDtoZWlnaHQ6IGF1dG87bGluZS1oZWln
-aHQ6IDEwMCU7b3V0bGluZTogbm9uZTt0ZXh0LWRlY29yYXRpb246IG5vbmU7Ij48L2Rpdj48ZGl2
-IHN0eWxlPSJjbGVhcjpib3RoOyI+PC9kaXY+PC90YWJsZT48L3RkPjwvdHI+PHRyPjx0ZCBzdHls
-ZT0icGFkZGluZzogMWVtIDA7Ij48dGFibGUgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIw
-IiBib3JkZXI9IjAiIHdpZHRoPSI3MDBweCI+PHRkIHdpZHRoPSI0MDBweCI+PGRpdj5EQU1BR0U6
-PGJyPjEgUmVzb25hdG9yIGRlc3Ryb3llZCBieSA8c3BhbiBzdHlsZT0iY29sb3I6ICM0MjhGNDM7
-Ij5tYXRhaGFhcmk8L3NwYW4+IGF0IDAzOjQ3IGhycyBHTVQ8YnI+Tm8gcmVtYWluaW5nIFJlc29u
-YXRvcnMgZGV0ZWN0ZWQgb24gdGhpcyBQb3J0YWwuPC9kaXY+PC90ZD48dGQ+PGRpdj5TVEFUVVM6
-PGJyPkxldmVsIDE8YnI+SGVhbHRoOiAwJTxicj5Pd25lcjogW3VuY2FwdHVyZWRdPC9kaXY+PC90
-ZD48L3RhYmxlPjwvdGQ+PC90cj48L3Rib2R5PjwvdGFibGU+PC90ZD48L3RyPjx0cj48dGQgaGVp
-Z2h0PSIzNHB4IiBzdHlsZT0icGFkZGluZy10b3A6IDFlbTsgcGFkZGluZy1sZWZ0OiAyNXB4OyI+
-PGltZyBzcmM9Imh0dHA6Ly9jb21tb25kYXRhc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9pbmdyZXNz
-ZW1haWwvY29tbW9uL3RyYW5zbWlzc2lvbi1lbmQuZ2lmIiBhbHQ9IioqIEluZ3Jlc3MgLSBFbmQg
-VHJhbnNtaXNzaW9uICoqIiB3aWR0aD0iMjkzIiBoZWlnaHQ9IjM0IiBzdHlsZT0iZGlzcGxheTog
-YmxvY2s7IGJvcmRlcjogMDsgaGVpZ2h0OiBhdXRvOyBsaW5lLWhlaWdodDogMTAwJTsgb3V0bGlu
-ZTogbm9uZTsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyI+PC90ZD48L3RyPjwvdGJvZHk+PC90YWJs
-ZT48L2Rpdj4=
---089e0122f6c8d2d96a0504b8f045--
+TCs2NjRROHcwRkZiSEQbKEI8L2Rpdj48ZGl2PjxhIHRhcmdldD0iX2JsYW5rIiBocmVmPSJodHRw
+czovL3d3dy5pbmdyZXNzLmNvbS9pbnRlbD9sbD0zNS42Nzg5OTYsMTM5Ljc4MzI3NyZwbGw9MzUu
+Njc4OTk2LDEzOS43ODMyNzcmej0xOSIgc3R5bGU9ImNvbG9yOiAjRDczQjhFOyBib3JkZXI6IG5v
+bmU7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsiPjEgQ2hvbWUtMTgtMTEgU2hpbmthd2EsIENodW8s
+IFRva3lvLCBKYXBhbjwvYT48L2Rpdj48L3RkPjwvdHI+PHRyPjx0ZCBzdHlsZT0ib3ZlcmZsb3c6
+IGhpZGRlbjsiPjx0YWJsZSBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiIGJvcmRlcj0i
+MCI+PGRpdiBzdHlsZT0id2lkdGg6MTAwMHB4OyI+PGRpdiBzdHlsZT0id2lkdGg6IGF1dG87IGhl
+aWdodDogMTYwcHg7IGZsb2F0OiBsZWZ0OyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7Ij48aW1nIHNy
+Yz0iaHR0cDovL2xoMy5nZ3BodC5jb20vWUJ0UkRHaHRWbWdZSS1GWGh6ck8tbGI4Umt4bnJ1ZTU3
+R1otdzBFVnVGemxmbng0NlpqMkNDZmhkVWJQNnNrZ25lX09HdnBVRE5XR3JXcEk4c1NPIiBhbHQ9
+IlBvcnRhbCAtIBskQkwrNjY0UTh3MEZGYkhEGyhCIiBoZWlnaHQ9IjE2MCIgc3R5bGU9ImRpc3Bs
+YXk6IGJsb2NrO2JvcmRlcjogMDtoZWlnaHQ6IGF1dG87bGluZS1oZWlnaHQ6IDEwMCU7b3V0bGlu
+ZTogbm9uZTt0ZXh0LWRlY29yYXRpb246IG5vbmU7Ij48L2Rpdj48ZGl2IHN0eWxlPSJ3aWR0aDog
+YXV0bzsgaGVpZ2h0OiAxNjBweDsgZmxvYXQ6IGxlZnQ7IGRpc3BsYXk6IGlubGluZS1ibG9jazsg
+b3ZlcmZsb3c6aGlkZGVuOyI+PGltZyBzcmM9Imh0dHA6Ly9tYXBzLmdvb2dsZWFwaXMuY29tL21h
+cHMvYXBpL3N0YXRpY21hcD9jZW50ZXI9MzUuNjc4OTk2LDEzOS43ODMzNzcmem9vbT0xOSZzaXpl
+PTcwMHgxNjAmc2Vuc29yPWZhbHNlJnN0eWxlPXZpc2liaWxpdHk6b24lN0NzYXR1cmF0aW9uOi01
+MCU3Q2ludmVydF9saWdodG5lc3M6dHJ1ZSU3Q2h1ZToweDEzMWMxYyZzdHlsZT1mZWF0dXJlOndh
+dGVyJTdDdmlzaWJpbGl0eTpvbiU3Q2h1ZToweDAwNWVmZiU3Q2ludmVydF9saWdodG5lc3M6dHJ1
+ZSZzdHlsZT1mZWF0dXJlOnBvaSU3Q3Zpc2liaWxpdHk6b2ZmJnN0eWxlPWZlYXR1cmU6dHJhbnNp
+dCU3Q3Zpc2liaWxpdHk6b2ZmJm1hcmtlcnM9aWNvbjpodHRwOi8vY29tbW9uZGF0YXN0b3JhZ2Uu
+Z29vZ2xlYXBpcy5jb20vaW5ncmVzcy5jb20vaW1nL21hcF9pY29ucy9tYXJrZXJfaW1hZ2VzL2h1
+bV84cmVzLnBuZyU3Q3NoYWRvdzpmYWxzZSU3QzM1LjY3ODk5NiwxMzkuNzgzMjc3IiBhbHQ9Ik1h
+cCIgd2lkdGg9IjcwMCIgaGVpZ2h0PSIxNjAiIHN0eWxlPSJkaXNwbGF5OiBibG9jaztib3JkZXI6
+IDA7aGVpZ2h0OiBhdXRvO2xpbmUtaGVpZ2h0OiAxMDAlO291dGxpbmU6IG5vbmU7dGV4dC1kZWNv
+cmF0aW9uOiBub25lOyI+PC9kaXY+PGRpdiBzdHlsZT0iY2xlYXI6Ym90aDsiPjwvZGl2PjwvdGFi
+bGU+PC90ZD48L3RyPjx0cj48dGQgc3R5bGU9InBhZGRpbmc6IDFlbSAwOyI+PHRhYmxlIGNlbGxw
+YWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgYm9yZGVyPSIwIiB3aWR0aD0iNzAwcHgiPjx0ZCB3
+aWR0aD0iNDAwcHgiPjxkaXY+REFNQUdFOjxicj4xIE1vZCBkZXN0cm95ZWQgYnkgPHNwYW4gc3R5
+bGU9ImNvbG9yOiAjNDI4RjQzOyI+am9obmZrZW5qaXJvPC9zcGFuPiBhdCAxMTowNyBocnMgR01U
+PGJyPjggUmVzb25hdG9ycyByZW1haW5pbmcgb24gdGhpcyBQb3J0YWwuPC9kaXY+PC90ZD48dGQ+
+PGRpdj5TVEFUVVM6PGJyPkxldmVsIDc8YnI+SGVhbHRoOiA5NSU8YnI+T3duZXI6IDxzcGFuIHN0
+eWxlPSJjb2xvcjogIzM2NzlCOTsiPkdhcFBhY2tlcjwvc3Bhbj48L2Rpdj48L3RkPjwvdGFibGU+
+PC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT48L3RkPjwvdHI+PHRyPjx0ZCBoZWlnaHQ9IjM0cHgi
+IHN0eWxlPSJwYWRkaW5nLXRvcDogMWVtOyBwYWRkaW5nLWxlZnQ6IDI1cHg7Ij48aW1nIHNyYz0i
+aHR0cDovL2NvbW1vbmRhdGFzdG9yYWdlLmdvb2dsZWFwaXMuY29tL2luZ3Jlc3NlbWFpbC9jb21t
+b24vdHJhbnNtaXNzaW9uLWVuZC5naWYiIGFsdD0iKiogSW5ncmVzcyAtIEVuZCBUcmFuc21pc3Np
+b24gKioiIHdpZHRoPSIyOTMiIGhlaWdodD0iMzQiIHN0eWxlPSJkaXNwbGF5OiBibG9jazsgYm9y
+ZGVyOiAwOyBoZWlnaHQ6IGF1dG87IGxpbmUtaGVpZ2h0OiAxMDAlOyBvdXRsaW5lOiBub25lOyB0
+ZXh0LWRlY29yYXRpb246IG5vbmU7Ij48L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPjwvZGl2Pg==
+--089e013a038648bdd70505600609--

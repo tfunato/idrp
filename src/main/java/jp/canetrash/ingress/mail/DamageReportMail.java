@@ -1,6 +1,8 @@
 package jp.canetrash.ingress.mail;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Ingress damage report mail
@@ -10,47 +12,37 @@ import java.util.Date;
  */
 public class DamageReportMail {
 
+	private String messageId;
+
+	private Date date;
+
 	private String from;
 
 	private String to;
 
 	private String subject;
 
-	private Date sentDate;
+	private String oppositeAgentName;
 
 	private String agentName;
 
-	private String faction;
+	private List<Portal> portals = new ArrayList<>();;
 
-	private String agentLevel;
+	public String getMessageId() {
+		return messageId;
+	}
 
-	private String portalName;
+	public void setMessageId(String messageId) {
+		this.messageId = messageId;
+	}
 
-	private String portalAddress;
+	public Date getDate() {
+		return date;
+	}
 
-	private String portalIntelUrl;
-
-	private String portalImageUrl;
-
-	private String portalStatusImageUrl;
-
-	private String enemyAgentName;
-
-	private String currentPortalLevel;
-
-	private String currentPortalHealth;
-
-	private String currentPortalOwner;
-
-	private Date alertDate;
-
-	/** 経度 */
-	private String portalLongitude;
-
-	/** 緯度 */
-	private String portalLatitude;
-
-	private String damageReport;
+	public void setDate(Date date) {
+		this.date = date;
+	}
 
 	public String getFrom() {
 		return from;
@@ -76,12 +68,20 @@ public class DamageReportMail {
 		this.subject = subject;
 	}
 
-	public Date getSentDate() {
-		return sentDate;
+	public String getOppositeAgentName() {
+		return oppositeAgentName;
 	}
 
-	public void setSentDate(Date sentDate) {
-		this.sentDate = sentDate;
+	public void setOppositeAgentName(String oppositeAgentName) {
+		this.oppositeAgentName = oppositeAgentName;
+	}
+
+	public List<Portal> getPortals() {
+		return portals;
+	}
+
+	public void setPortals(List<Portal> portals) {
+		this.portals = portals;
 	}
 
 	public String getAgentName() {
@@ -92,123 +92,4 @@ public class DamageReportMail {
 		this.agentName = agentName;
 	}
 
-	public String getFaction() {
-		return faction;
-	}
-
-	public void setFaction(String faction) {
-		this.faction = faction;
-	}
-
-	public String getAgentLevel() {
-		return agentLevel;
-	}
-
-	public void setAgentLevel(String agentLevel) {
-		this.agentLevel = agentLevel;
-	}
-
-	public String getPortalName() {
-		return portalName;
-	}
-
-	public void setPortalName(String portalName) {
-		this.portalName = portalName;
-	}
-
-	public String getPortalAddress() {
-		return portalAddress;
-	}
-
-	public void setPortalAddress(String portalAddress) {
-		this.portalAddress = portalAddress;
-	}
-
-	public String getPortalIntelUrl() {
-		return portalIntelUrl;
-	}
-
-	public void setPortalIntelUrl(String portalIntelUrl) {
-		this.portalIntelUrl = portalIntelUrl;
-	}
-
-	public String getPortalImageUrl() {
-		return portalImageUrl;
-	}
-
-	public void setPortalImageUrl(String portalImageUrl) {
-		this.portalImageUrl = portalImageUrl;
-	}
-
-	public String getPortalStatusImageUrl() {
-		return portalStatusImageUrl;
-	}
-
-	public void setPortalStatusImageUrl(String portalStatusImageUrl) {
-		this.portalStatusImageUrl = portalStatusImageUrl;
-	}
-
-	public String getEnemyAgentName() {
-		return enemyAgentName;
-	}
-
-	public void setEnemyAgentName(String enemyAgentName) {
-		this.enemyAgentName = enemyAgentName;
-	}
-
-	public String getCurrentPortalLevel() {
-		return currentPortalLevel;
-	}
-
-	public void setCurrentPortalLevel(String currentPortalLevel) {
-		this.currentPortalLevel = currentPortalLevel;
-	}
-
-	public String getCurrentPortalHealth() {
-		return currentPortalHealth;
-	}
-
-	public void setCurrentPortalHealth(String currentPortalHealth) {
-		this.currentPortalHealth = currentPortalHealth;
-	}
-
-	public String getCurrentPortalOwner() {
-		return currentPortalOwner;
-	}
-
-	public void setCurrentPortalOwner(String currentPortalOwner) {
-		this.currentPortalOwner = currentPortalOwner;
-	}
-
-	public Date getAlertDate() {
-		return alertDate;
-	}
-
-	public void setAlertDate(Date alertDate) {
-		this.alertDate = alertDate;
-	}
-
-	public String getPortalLongitude() {
-		return portalLongitude;
-	}
-
-	public void setPortalLongitude(String portalLongitude) {
-		this.portalLongitude = portalLongitude;
-	}
-
-	public String getPortalLatitude() {
-		return portalLatitude;
-	}
-
-	public void setPortalLatitude(String portalLatitude) {
-		this.portalLatitude = portalLatitude;
-	}
-
-	public String getDamageReport() {
-		return damageReport;
-	}
-
-	public void setDamageReport(String damageReport) {
-		this.damageReport = damageReport;
-	}
 }

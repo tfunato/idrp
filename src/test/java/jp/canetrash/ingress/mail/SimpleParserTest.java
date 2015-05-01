@@ -4,7 +4,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.io.FileInputStream;
-import java.util.Calendar;
 
 import javax.mail.internet.MimeMessage;
 
@@ -15,80 +14,45 @@ public class SimpleParserTest {
 	private SimpleParser target = new SimpleParser();
 
 	@Test
-	public void simpleTest() throws Exception {
+	public void pattern1Test() throws Exception {
 		MimeMessage msg = new MimeMessage(null, new FileInputStream(
 				"src/test/resources/damage-report1.eml"));
-
 		DamageReportMail actual = target.parse(msg);
-		assertThat(actual.getFrom(), is("Niantic Project Operations"));
+		assertThat(actual.getMessageId(), is("<089e013a038648bdf9050560060c@google.com>"));
 		assertThat(actual.getTo(), is("atomosphere"));
-		assertThat(actual.getSubject(),
-				is("Ingress Damage Report: Entities attacked by matahaari"));
-		assertThat(actual.getPortalName(), is("恵比寿駅前噴水"));
+		assertThat(actual.getFrom(), is("Niantic Project Operations"));
 		assertThat(actual.getAgentName(), is("atomosphere"));
-		assertThat(actual.getFaction(), is("Resistance"));
-		assertThat(actual.getAgentLevel(), is("L9"));
-		assertThat(
-				actual.getPortalAddress(),
-				is("Komazawa Dori, １丁目 Ebisuminami, Shibuya, Tokyo 150-0013, Japan"));
-		assertThat(
-				actual.getPortalIntelUrl(),
-				is("https://www.ingress.com/intel?ll=35.647189,139.709069&pll=35.647189,139.709069&z=19"));
-		assertThat(
-				actual.getPortalImageUrl(),
-				is("http://lh6.ggpht.com/FUZkUTk6re3dn9QKX3odoai2rb6HEbVt3mV5uZKON8DkZEA0L7BuVXLrqDC7smv9mcY7nsrwCl9BXD61B-k"));
-		assertThat(
-				actual.getPortalStatusImageUrl(),
-				is("http://maps.googleapis.com/maps/api/staticmap?center=35.647189,139.709169&zoom=19&size=700x160&sensor=false&style=visibility:on%7Csaturation:-50%7Cinvert_lightness:true%7Chue:0x131c1c&style=feature:water%7Cvisibility:on%7Chue:0x005eff%7Cinvert_lightness:true&style=feature:poi%7Cvisibility:off&style=feature:transit%7Cvisibility:off&markers=icon:http://commondatastorage.googleapis.com/ingress.com/img/map_icons/marker_images/neutral_icon.png%7Cshadow:false%7C35.647189,139.709069"));
-		assertThat(actual.getEnemyAgentName(), is("matahaari"));
-		assertThat(actual.getCurrentPortalLevel(), is("1"));
-		assertThat(actual.getCurrentPortalHealth(), is("0%"));
-		assertThat(actual.getCurrentPortalOwner(), is("[uncaptured]"));
-		assertThat(actual.getPortalLatitude(), is("35.647189"));
-		assertThat(actual.getPortalLongitude(), is("139.709069"));
-		Calendar actualSendCal = Calendar.getInstance();
-		actualSendCal.clear();
-		actualSendCal.setTimeInMillis(actual.getSentDate().getTime());
-		assertThat(actualSendCal.get(Calendar.MONTH), is(Calendar.OCTOBER));
-		assertThat(actualSendCal.get(Calendar.DAY_OF_MONTH), is(6));
-		assertThat(actualSendCal.get(Calendar.HOUR_OF_DAY), is(12));
-		assertThat(actualSendCal.get(Calendar.MINUTE), is(47));
-		assertThat(actualSendCal.get(Calendar.SECOND), is(24));
-
-		Calendar actualAlertCal = Calendar.getInstance();
-		actualAlertCal.clear();
-		actualAlertCal.setTimeInMillis(actual.getAlertDate().getTime());
-		assertThat(actualAlertCal.get(Calendar.MONTH), is(Calendar.OCTOBER));
-		assertThat(actualAlertCal.get(Calendar.DAY_OF_MONTH), is(6));
-		assertThat(actualAlertCal.get(Calendar.HOUR_OF_DAY), is(12));
-		assertThat(actualAlertCal.get(Calendar.MINUTE), is(47));
-		assertThat(actualAlertCal.get(Calendar.SECOND), is(0));
-
+		assertThat(actual.getOppositeAgentName(), is("johnfkenjiro"));
+		assertThat(actual.getDate().getTime(), is(1413284863000L));
+		assertThat(actual.getSubject(), is("Ingress Damage Report: Entities attacked by johnfkenjiro"));
+		assertThat(actual.getPortals().size(), is(1));
+		assertThat(actual.getPortals().get(0).getPortalName(), is("湊橋観光案内板"));
+		assertThat(actual.getPortals().get(0).getLongitude(), is("139.783277"));
+		assertThat(actual.getPortals().get(0).getLatitude(), is("35.678996"));
+		assertThat(actual.getPortals().get(0).getPortalIntelUrl(), is("https://www.ingress.com/intel?ll=35.678996,139.783277&pll=35.678996,139.783277&z=19"));
 	}
 
 	@Test
-	public void simpleTest2() throws Exception {
+	public void pattern2Test() throws Exception {
 		MimeMessage msg = new MimeMessage(null, new FileInputStream(
 				"src/test/resources/damage-report2.eml"));
 		DamageReportMail actual = target.parse(msg);
+		assertThat(actual.getMessageId(), is("<001a1134aeac8919ad0514fc5ff2@google.com>"));
+		assertThat(actual.getTo(), is("atomosphere"));
+		assertThat(actual.getFrom(), is("Niantic Project Operations"));
 		assertThat(actual.getAgentName(), is("atomosphere"));
-		assertThat(actual.getAgentLevel(), is("L9"));
-		assertThat(actual.getFaction(), is("Resistance"));
-		assertThat(actual.getPortalName(), is("石"));
-		assertThat(actual.getPortalAddress(),
-				is("Japan, Tokyo, Meguro, Jiyugaoka, １丁目８−９"));
-		assertThat(
-				actual.getPortalIntelUrl(),
-				is("https://www.ingress.com/intel?ll=35.606682,139.668971&pll=35.606682,139.668971&z=19"));
-		assertThat(
-				actual.getPortalImageUrl(),
-				is("http://lh3.ggpht.com/EJuhT5QxrCJIwXlKBCwarTw6Q_4eIdKgQABaDr4L29DW6oDi1J0DBmIHE5jU4EpPByrWjGEyVZzxYvKnew"));
-		assertThat(
-				actual.getPortalStatusImageUrl(),
-				is("http://maps.googleapis.com/maps/api/staticmap?center=35.606682,139.669071&zoom=19&size=700x160&sensor=false&style=visibility:on%7Csaturation:-50%7Cinvert_lightness:true%7Chue:0x131c1c&style=feature:water%7Cvisibility:on%7Chue:0x005eff%7Cinvert_lightness:true&style=feature:poi%7Cvisibility:off&style=feature:transit%7Cvisibility:off&markers=icon:http://commondatastorage.googleapis.com/ingress.com/img/map_icons/marker_images/neutral_icon.png%7Cshadow:false%7C35.606682,139.668971"));
-		assertThat(actual.getEnemyAgentName(), is("mune1979"));
-		assertThat(actual.getCurrentPortalLevel(), is("1"));
-		assertThat(actual.getCurrentPortalHealth(), is("0%"));
-		assertThat(actual.getCurrentPortalOwner(), is("[uncaptured]"));
+		assertThat(actual.getOppositeAgentName(), is("testtest"));
+		assertThat(actual.getDate().getTime(), is(1430449050000L));
+		assertThat(actual.getSubject(), is("Ingress Damage Report: Entities attacked by testtest"));
+		assertThat(actual.getPortals().size(), is(2));
+		assertThat(actual.getPortals().get(0).getPortalName(), is("浅草郵便局 Aasakusa Post Office"));
+		assertThat(actual.getPortals().get(0).getLongitude(), is("139.790704"));
+		assertThat(actual.getPortals().get(0).getLatitude(), is("35.709946"));
+		assertThat(actual.getPortals().get(0).getPortalIntelUrl(), is("https://www.ingress.com/intel?ll=35.709946,139.790704&pll=35.709946,139.790704&z=19"));
+
+		assertThat(actual.getPortals().get(1).getPortalName(), is("願龍寺"));
+		assertThat(actual.getPortals().get(1).getLongitude(), is("139.790373"));
+		assertThat(actual.getPortals().get(1).getLatitude(), is("35.710209"));
+		assertThat(actual.getPortals().get(1).getPortalIntelUrl(), is("https://www.ingress.com/intel?ll=35.710209,139.790373&pll=35.710209,139.790373&z=19"));
 	}
 }
