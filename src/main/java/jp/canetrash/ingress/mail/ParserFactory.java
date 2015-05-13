@@ -1,10 +1,9 @@
 package jp.canetrash.ingress.mail;
 
-import javax.mail.Message;
 
 public class ParserFactory {
 
-	public static Parser getParser(Message msg) {
+	public static Parser getParser() {
 		return new SimpleParser();
 	}
 }
